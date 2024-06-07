@@ -1,0 +1,100 @@
+.gigsCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.gigCard {
+  background-color: #292828;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  align-items: center;
+  border-radius: 20px;
+  max-width: 500px;
+}
+
+.gigsCardsWrapper {
+  width: 100%;
+  max-width: 680px;
+  margin: auto;
+
+}
+.gigsCardsWrapper h3 {
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 20px;
+}
+.gigCardImage {
+  max-width: 150px;
+  position: relative;
+}
+
+.gigCardImage > div {
+  position: relative;
+  padding: 20px 20px;
+  width: 97px;
+  text-align: center;
+}
+
+.gigCardImage > div > p {
+  margin: 0;
+  color: white;
+  font-family: "Manrope", sans-serif;
+}
+
+.gigCardContent {
+  width: 100%;
+}
+.gigCardContent h5 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  margin: 0px;
+  color: white;
+}
+
+.gigCardContent p {
+  margin-top: 3px;
+  font-size: 14px;
+  margin: 0px;
+  color: white;
+  opacity: 0.6;
+    margin-bottom: 13px;
+}
+.gigsCardsContainer {
+  padding: 0px 16px ;
+}
+@media (max-width: 425px) {
+    .gigCardContent h5{
+        font-size: 20px;
+    }
+    .gigCardContent p {
+        font-size: 12px;
+    }
+   
+  .gigCard {
+    padding: 10 20px;
+    gap: 20px;
+  }
+  .gigCardImage img {
+    height: 97px !important;
+  }
+  .gigCardImage > div {
+    padding: 10px 20px;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.buttondiv{
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}

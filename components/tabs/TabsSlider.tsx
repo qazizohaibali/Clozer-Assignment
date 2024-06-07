@@ -21,9 +21,11 @@ export default function TabsSlider({ filterTabs, setSelectedTab }) {
     >
       <Tabs
         value={value}
+        
         onChange={handleChange}
+        allowScrollButtonsMobile
         variant="scrollable"
-        scrollButtons="auto"
+        // scrollButtons="auto"
         aria-label="scrollable auto tabs example"
         TabIndicatorProps={{
           style: {
@@ -32,10 +34,11 @@ export default function TabsSlider({ filterTabs, setSelectedTab }) {
         }}
         style={{ color: "white" }}
       >
-        {filterTabs.map((item: any) => {
+        {filterTabs.map((item: any,index) => {
           return (
             <Tab
               color="white"
+              key={index}
               onClick={() => setSelectedTab(item.type)}
               style={{ color: "white" }}
               label={item.title}

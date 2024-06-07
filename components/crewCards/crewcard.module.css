@@ -1,0 +1,73 @@
+.crewCard {
+  position: relative;
+  width: 100%;
+}
+
+.crewCardMainContainer{
+    padding: 20px;
+}
+
+.crewCardContent {
+  position: relative;
+  padding: 150px 20px 20px 20px;
+}
+
+.crewCardWrapper {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.crewCardContentBackDrop {
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  transform: translateY(100px);
+}
+
+.crewCardContentBackDrop h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 25px;
+  margin: 0px !important;
+}
+.crewCardContentBackDrop p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0px;
+}
+
+@media (max-width: 767px) {
+    .crewcard{
+      max-width: 100% !important;
+    }
+  .crewCardWrapper {
+    display: flex;
+    flex-direction: column;
+    /* padding: 16px; */
+    gap: 120px;
+  }
+  .crewCardContent {
+    padding: 180px 20px 10px 20px;
+  }
+  .crewCardContentBackDrop {
+    padding: 10px;
+    margin: auto;
+    transform: translateY(60px);
+  }
+}
+
+.crewCardMainContainer h3{
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    /* margin-top: 14px; */
+    margin-top: 0px;
+    margin-bottom: 25px;
+}

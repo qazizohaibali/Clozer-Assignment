@@ -25,13 +25,11 @@ const ProfileCard: React.FC<UserProfileComponentProps> = ({ profile }) => {
     return <div>Loading...</div>; // Render loading state
   }
 
-  console.log("Profile", profile);
   let firstProfile = profile[0];
 
   const settingHandler = () => {
     setOpenSettingPopup(!openSettingPopup);
   };
-  console.log("asdasaa", openSettingPopup);
 
   const style = {
     position: 'absolute' as 'absolute',

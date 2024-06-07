@@ -1,0 +1,63 @@
+.ShowCardsWrapper {
+  max-width: 700px;
+  margin: auto;
+  padding: 0px 16px;
+}
+
+.ShowCardsWrapper > h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  color: white;
+  /* margin-bottom: 25px; */
+}
+
+.showcard {
+  display: flex;
+  /* align-items: center; */
+  gap: 20px;
+  border: 1px solid rgb(61, 61, 61);
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.shopCardContent h4 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 25px;
+  margin: 0;
+}
+.shopCardContent h6 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 0px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.shopCardDate {
+  width: 100px;
+}
+
+@media (max-width: 425px) {
+  .showcard {
+    flex-direction: column;
+  }
+  .showCardImage {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+  .shopCardContent h4 {
+    font-size: 20px;
+  }
+  .shopCardContent h6 {
+    padding: 15px 0px 25px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,79 @@
+.musicCardsSliderWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.musicCardContent{
+    display: flex ;
+    align-items: center;
+    gap: 20px;
+    /* background-color: antiquewhite;s */
+    background-color: #292828;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.musicCardContent img{
+    border-radius: 50px;
+}
+
+.musicCardContent h2,
+.musicCardContent h6{
+    margin: 0 ;
+    color: white;
+}
+
+.musicCardContent h2{
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    /* margin-top: 14px; */
+    margin-bottom: 25px;
+    }
+    .musicCardContent h6{
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    opacity: 0.7;
+}
+
+
+@media (max-width:425px) {
+    .musicCardsSliderWrapper{
+        padding: 16px;
+    }
+    .musicCardContent{
+        gap: 14px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .musicCardContent h2{
+        font-size: 18px;
+        line-height: 22px;
+
+        margin-bottom: 3px;
+    }
+    .musicCardContent h6{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .logoContainer{
+        margin-top: 10px !important;
+    }
+    .logoContainer img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.musicCardsWrapper h3{
+    color: white;
+    padding: 20px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
