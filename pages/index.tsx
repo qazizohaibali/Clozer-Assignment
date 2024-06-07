@@ -1,15 +1,15 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { getServerSideProps } from "./server/fetchOtherData";
 import { useEffect, useState } from "react";
-
+import ProfileCard from "../components/profileCard/ProfileCard";
+import CardsList from "../components/cardsList/CardsList";
 
 export default function Home({ data }) {
 
   const [profileData, setProfileData] = useState();
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
@@ -38,7 +38,8 @@ export default function Home({ data }) {
       </Head>
 
       <main className={styles.main}>
-      My Components
+        <ProfileCard profile={profileData}/>
+        <CardsList data={data}/>
       </main>
 
       <footer className={styles.footer}>

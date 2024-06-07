@@ -1,0 +1,92 @@
+.profileCard {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  height: 650px;
+}
+
+.profileCard img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.profileCardContent {
+  position: relative;
+  padding: 370px 20px 0px 20px;
+  /* background: #9b8e8e; */
+  /* z-index: 100; */
+  height: 100%;
+  color: black;
+  text-align: center;
+  color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(113, 19, 19, 0.7665660014005602) 0%,
+    rgba(233, 209, 209, 0) 100%
+  );
+}
+
+.profileCardContent h2 {
+  font-size: 60px;
+  max-width: 200px;
+  margin: auto;
+  word-break: break-all;
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  line-height: 65px;
+}
+
+.profileCardContent h6{
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    opacity: 0.8;
+    margin: 30px 0px;
+}
+
+.profileCardContent p {
+    /* margin-top: 10px; */
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.profileCardTopBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profileCardTopBar > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 20px;
+    
+  
+}
+
+.profileCardTopBar > div > h5{
+    color: white;
+    text-transform: uppercase;
+    font-family: "Manrope", sans-serif;
+    letter-spacing: 3px;
+      opacity: 0.9;
+}
+
+.TopBarSettings{
+    cursor: pointer;
+}
+.settingPopUp{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: #ffffff;
+    padding: 20px;
+}
