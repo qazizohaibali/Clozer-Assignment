@@ -22,7 +22,7 @@ const ProfileCard: React.FC<UserProfileComponentProps> = ({ profile }) => {
   const handleClose = () => setOpen(false);
 
   if (!profile) {
-    return <div>Loading...</div>; // Render loading state
+    return <div>Loading</div>
   }
 
   let firstProfile = profile[0];
@@ -43,6 +43,46 @@ const ProfileCard: React.FC<UserProfileComponentProps> = ({ profile }) => {
     width:'full',
     p: 2,
   };
+
+  const shareOnWhatsApp = ()=> {
+    
+    const whatsappShareUrl = 'https://api.whatsapp.com/send?text=Your%20Message%20Here';
+    window.open(whatsappShareUrl, '_blank');
+  }
+
+  const copyUrlToClipboard =() =>{
+    // Get the current URL
+    const currentUrl = window.location.href;
+  
+    // Write the URL to the clipboard
+    navigator.clipboard.writeText(currentUrl)
+      .then(() => {
+        console.log('URL copied to clipboard:', currentUrl);
+      })
+      .catch((error) => {
+        console.error('Error copying URL to clipboard:', error);
+      });
+  }
+
+function copyToClipboard(text) {
+  // Check if the Clipboard API is supported by the browser
+  if (!navigator.clipboard) {
+    // Clipboard API not supported, handle error or fallback to another method
+    console.error('Clipboard API not supported');
+    return;
+  }
+
+  // Write the text to the clipboard
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      console.log('Text copied to clipboard:', text);
+      // You can optionally show a success message to the user
+    })
+    .catch((error) => {
+      console.error('Error copying text to clipboard:', error);
+      // You can optionally show an error message to the user
+    });
+}
 
   return (
     <div className={styles.profileCard}>
@@ -67,11 +107,15 @@ const ProfileCard: React.FC<UserProfileComponentProps> = ({ profile }) => {
       </div>
       <div className={styles.profileCardTopBar}>
         <div>
+          <div style={{width:'50px', margin:'auto'}}>
           <BiArrowBack style={{cursor:"pointer"}} color="white" size={30} />
-          <h5>Profile</h5>
+          </div>
+          <h5  style={{width:'100%',textAlign:'center'}}>Profile</h5>
+          <div style={{width:'50px', margin:'auto'}}>
           <Button onClick={handleOpen}>
             <HiDotsVertical color="white" size={30} />
           </Button>
+          </div>
         </div>
       </div>
       <Modal
@@ -81,13 +125,13 @@ const ProfileCard: React.FC<UserProfileComponentProps> = ({ profile }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography style={{display:'flex', alignItems:"center", gap:"10px"}} id="modal-modal-title" variant="h6" component="h2">
+          <Typography  style={{ display:'flex', alignItems:"center", gap:"10px"}} id="modal-modal-title" variant="h6" component="h2">
          <MdModeEditOutline size={25}/> Edit Profile
           </Typography>
-          <Typography style={{display:'flex', alignItems:"center", gap:"10px"}} id="modal-modal-title" variant="h6" component="h5">
-         <IoLogoWhatsapp size={23}/> Share On WhatsApp
+          <Typography onClick={shareOnWhatsApp} style={{cursor:'pointer',display:'flex', alignItems:"center", gap:"10px"}} id="modal-modal-title" variant="h6" component="h5">
+         <IoLogoWhatsapp size={23} /> Share On WhatsApp
           </Typography>
-          <Typography style={{display:'flex', alignItems:"center", gap:"10px"}} id="modal-modal-title" variant="h6" component="h2">
+          <Typography onClick={copyUrlToClipboard} style={{cursor:'pointer',display:'flex', alignItems:"center", gap:"10px"}} id="modal-modal-title" variant="h6" component="h2">
          <FaCopy size={23}/> Copy Link
           </Typography>
          

@@ -9,7 +9,7 @@ export default function CrewCards({ filteredData }) {
   //   var item = filteredData.items;
   return (
     <div className={styles.crewCardMainContainer} style={{ color: "white",marginBottom:"100px" }}>
-      <h3>_{filteredData.title}</h3>
+      <h4>_{filteredData.title}</h4>
       <div className={styles.crewCardWrapper}>
         {filteredData?.items?.map((item: any, index: number) => {
           return (

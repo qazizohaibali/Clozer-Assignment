@@ -4,7 +4,16 @@
 }
 
 .crewCardMainContainer{
-    padding: 20px;
+    padding: 0px 20px;
+}
+
+.crewCardMainContainer h4{
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 20px;
+  /* margin: 0px !important; */
 }
 
 .crewCardContent {
@@ -32,6 +41,7 @@
   font-size: 23px;
   line-height: 25px;
   margin: 0px !important;
+  
 }
 .crewCardContentBackDrop p {
   font-family: "Manrope", sans-serif;
